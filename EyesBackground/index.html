@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Intro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+        <rect width="512" height="512" fill="#141717"/>
+        <g filter="url(#twitch)">
+            <use href="#eye01" x="64" y="128"/>
+            <use href="#eye01" x="256" y="128"  transform="rotate(10 256 128) scale(1 0.75)" opacity="0.6"/>
+            <use href="#eye01" x="256" y="320"  transform="rotate(-15) scale(-1.1 0.9)" transform-origin="312 360"/>
+            <use href="#eye01" x="128" y="220"  transform="scale(-0.8 0.9)" transform-origin="130 280" opacity="0.8"/>
+            
+            <use href="#eye02" x="170" y="180 "/>
+            <use href="#eye02" x="360" y="260" transform="rotate(-15) scale(0.45 0.6)" transform-origin="360 260" opacity="0.7"/>
+            <use href="#eye02" x="120" y="480" transform="rotate(5) scale(0.5 0.4)" transform-origin="180 360" opacity="0.85"/>
+            
+            <use href="#eye03" x="30" y="320" transform="scale(1.2 1.3) rotate(5 120 320)" opacity="0.6" transform-origin="40 320"/>
+            <use href="#eye03" x="340" y="180" transform="rotate(-5 360 120)" opacity="0.9"/>
+            
+            <use href="#eye04" x="140" y="260" opacity="0.9"/>
+            <use href="#eye04" x="240" y="440" transform="rotate(15) scale(0.7 0.7)" transform-origin="240 440" opacity="0.7"/>
+        </g>
+        <defs>
+            <g id="eye01">
+                <path fill="#E0E8EA" id="eyeb01">
+                    <animate attributeName="d" dur="4s" repeatCount="indefinite" calcMode="spline"
+                        keyTimes="0;0.05;0.75;0.8;1"
+                        keySplines="0 0.5 0.9 0.1; 1 1 1 1; 0 0.5 0.9 0.1; 1 1 1 1"
+                        values="M10 42  C24 44 24 44 60 44  C102 44 102 35 118 28  C102 35 102 44 60 44  C24 44 24 44 10 42Z;
+                                M0 42  C1 32 15 0 58 0  C101 0 122 17 128 28  C117 39 89 61 64 63  C38 65 10 50 0 42Z;
+                                M0 42  C1 32 15 0 58 0  C101 0 122 17 128 28  C117 39 89 61 64 63  C38 65 10 50 0 42Z;
+                                M10 42  C24 44 24 44 60 44  C102 44 102 35 118 28  C102 35 102 44 60 44  C24 44 24 44 10 42Z;
+                                M10 42  C24 44 24 44 60 44  C102 44 102 35 118 28  C102 35 102 44 60 44  C24 44 24 44 10 42Z" />
+                </path>
+                <ellipse id="eyep01" cx="56" cy="32" rx="6" ry="12" fill="#141717">
+                    <animate attributeName="ry" dur="4s" repeatCount="indefinite" calcMode="linear" 
+                        keyTimes="0;0.2;0.6;1"
+                        values="12; 24; 24; 12"/>	
+                    <animate attributeName="cx" dur="3s" repeatCount="indefinite" calcMode="spline" 
+                        keyTimes="0;0.1;0.2;0.5;1"
+                        keySplines="1 1 1 1; 1 0 0.8 0.5; 1 0 0.8 0.5; 1 0 0.8 0.5"
+                        values="56; 56; 72; 48; 56;"/>	
+                </ellipse>
+            </g> 
+            <g id="eye02">
+                <path fill="#E0E8EA" id="eyeb02">
+                    <animate attributeName="d" dur="5s" repeatCount="indefinite" calcMode="spline" begin="400ms"
+                        keyTimes="0;0.03;0.88;0.92;1"
+                        keySplines="0 0.5 0.9 0.1; 1 1 1 1; 0 0.5 0.9 0.1; 1 1 1 1"
+                        values="M140 59  C142 59 142 59 87 59  C33 59 33 59 20 53  C33 59 33 59 87 59  C142 59 142 59 140 59Z;
+                                M160 59  C154 42 133 0 79 0  C24 0 14 31 0 53  C44 71 44 88 91 87  C137 87 146 62 160 59Z;
+                                M160 59  C154 42 133 0 79 0  C24 0 14 31 0 53  C44 71 44 88 91 87  C137 87 146 62 160 59Z;
+                                M140 59  C142 59 142 59 87 59  C33 59 33 59 20 53  C33 59 33 59 87 59  C137 59 142 59 140 59Z;
+                                M140 59  C142 59 142 59 87 59  C33 59 33 59 20 53  C33 59 33 59 87 59  C137 59 142 59 140 59Z"/>
+                </path>
+                <ellipse id="eyep02" cx="112" cy="48" rx="8" ry="4" fill="#141717">
+                    <animate attributeName="ry" dur="5s" repeatCount="indefinite" calcMode="linear"  begin="400ms"
+                        keyTimes="0;0.06;0.85;1"
+                        values="4; 24; 24; 4"/>	
+                    <animate attributeName="rx" dur="4s" repeatCount="indefinite" calcMode="linear"  begin="400ms"
+                        keyTimes="0; 0.15; 0.2; 0.85;1"
+                        values="8; 8; 14; 8; 8"/>	
+                    <animate attributeName="cx" dur="4s" repeatCount="indefinite" calcMode="spline"  begin="400ms"
+                        keyTimes="0;0.1;0.2;0.5;1"
+                        keySplines="1 1 1 1; 1 0 0.8 0.5; 1 0 0.8 0.5; 1 0 0.8 0.5"
+                        values="76; 76; 122; 68; 76;"/>	
+                    <animate attributeName="cy" dur="10s" repeatCount="indefinite" calcMode="linear"  begin="400ms"
+                        values="48; 36; 50; 48; 48; 32; 24; 48"/>	
+                </ellipse>
+            </g>  
+            <g id="eye03">
+                <path fill="#E0E8EA" id="eyeb03">
+                    <animate attributeName="d" dur="4500ms" repeatCount="indefinite" calcMode="spline" begin="250ms"
+                        keyTimes="0;0.04;0.93;0.98;1"
+                        keySplines="0 0.5 0.9 0.1; 1 1 1 1; 0 0.5 0.9 0.1; 1 1 1 1"
+                        values="M108 26  C88 22 86 28 40 24  C22 22 22 22 0 16  C22 22 24 23 41 25  C88 24 88 23 108 26Z;
+                                M128 6  C101 1 71 0 40 0  C24 0 7 12 0 16  C16 22 50 34 76 34  C102 34 123 16 128 6Z;
+                                M128 6  C101 1 71 0 40 0  C24 0 7 12 0 16  C16 22 50 34 76 34  C102 34 123 16 128 6Z;
+                                M108 26  C88 22 86 28 40 24  C22 22 22 22 0 16  C22 22 24 23 41 25  C88 24 88 23 108 26Z;
+                                M108 26  C88 22 86 28 40 24  C22 22 22 22 0 16  C22 22 24 23 41 25  C88 24 88 23 108 26Z"/>
+                </path>
+                <ellipse id="eyep03" cx="64" cy="8" rx="4" ry="12" fill="#141717">
+                    <animate attributeName="ry" dur="4500ms" repeatCount="indefinite" calcMode="linear"  begin="250ms"
+                        keyTimes="0;0.06;0.95;1"
+                        values="4; 12; 12; 4"/>	
+                    <animate attributeName="cx" dur="12s" repeatCount="indefinite" calcMode="spline"  begin="250ms"
+                        values="64; 64; 72; 94; 48; 64"/>	
+                </ellipse>
+            </g> 
+            <g id="eye04" transform="scale(0.4 0.4)" transform-origin="0 0">
+                <path fill="#E0E8EA" id="eyeb04">
+                    <animate attributeName="d" dur="4500ms" repeatCount="indefinite" begin="600ms"
+                        keyTimes="0;0.04;0.93;0.98;1"
+                        keySplines="0 0.5 0.9 0.1; 1 1 1 1; 0 0.5 0.9 0.1; 1 1 1 1"
+                        values="M114 52  C100 68 100 68 80 80  C33 90 33 90 0 80  C33 90 33 90 68 80  C100 70 100 70 114 52Z;
+                                M114 52  C108 27 89 -12 43 4  C0 20 0 56 0 79  C12 81 29 102 66 94  C103 86 114 76 114 52Z;
+                                M114 52  C108 27 89 -12 43 4  C0 20 0 56 0 79  C12 81 29 102 66 94  C103 86 114 76 114 52Z;
+                                M114 52  C100 80 100 80 80 80  C33 80 33 80 0 80  C33 80 33 80 80 80  C100 80 100 80 114 52Z;
+                                M114 52  C100 80 100 80 80 80  C33 80 33 80 0 80  C33 80 33 80 80 80  C100 80 100 80 114 52Z"/>
+                </path>
+                <ellipse id="eyep04" cx="56" cy="48" rx="10" ry="12" fill="#141717">
+                    <animate attributeName="ry" dur="4500ms" repeatCount="indefinite" calcMode="linear" begin="600ms"
+                        keyTimes="0;0.1;0.9;1"
+                        values="12; 24; 24; 12"/>	
+                    <animate attributeName="cx" dur="500ms" repeatCount="indefinite" calcMode="discrete" begin="600ms"
+                        values="56; 48; 52; 48; 56;"/>	
+                </ellipse>
+        
+                <filter id="twitch">
+                    <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="1">
+                        <animate attributeName="seed" from="1" to="100" dur="20s" repeatCount="indefinite" />
+                    </feTurbulence>
+                <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="8" xChannelSelector="R" yChannelSelector="G" />
+            </filter>
+            </g> 
+        </defs>
+        </svg>
+        
+</body>
+</html>
