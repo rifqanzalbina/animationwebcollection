@@ -1,0 +1,77 @@
+@layer demo, orderedList;
+
+@layer orderedList{
+  ol.circle { --border-radius: 100vmax }
+  ol.square { --border-radius: 0 }
+  ol {
+    --card-color: hsl(0 0% 95%);
+    --text-color: hsl(0 0% 5%);
+    --border-size: 0.5rem;
+    --step-size: 2.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    counter-reset: liCount;
+    display: grid;
+    gap: calc(var(--border-size) * 2);
+    font-family: system-ui, sans-serif;
+  }
+
+  ol > li {
+    margin: var(--border-size);
+    background-color: var(--card-color);
+    color: var(--text-color);
+    display: grid;
+    grid-template-columns: var(--step-size) 1fr;
+    grid-auto-flow: dense;
+    align-items: center;
+    gap: calc(var(--border-size) * 4);
+    counter-increment: liCount;
+    padding: calc(var(--border-size) * 2);
+    position: relative;
+    --so: calc(var(--border-size) * .25);
+    --bs1: var(--so) var(--so) var(--border-size) hsl(0 0% 0% / .5);
+    --bs2: 0 0 0 var(--border-size) var(--accent-color);
+    --bs3: var(--so) var(--so) var(--border-size) calc(var(--border-size)) hsl(0 0% 0% / .5);
+    box-shadow: var(--bs1);
+    border-radius: var(--border-radius, 0)
+  }
+  ol > li::before {
+    content: counter(liCount);
+    aspect-ratio: 1/1;
+    display: grid;
+    place-items: center;
+    background-color: var(--card-color);
+    box-shadow: var(--bs1), var(--bs2), var(--bs3);
+    font-size: calc(var(--step-size) * .5);
+    border-radius: inherit;
+  }
+  ol > li::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    aspect-ratio: 1;
+    background-color: var(--accent-color);
+    z-index: -1;
+    box-shadow: var(--bs2), var(--bs3);
+    border-radius: inherit;
+  }
+  ol > li:nth-child(even){ grid-template-columns: 1fr var(--step-size) }
+  ol > li:nth-child(even)::before{ grid-column: 2 }
+  ol > li:nth-child(even)::after{ right: 0 }
+}
+
+@layer demo {
+  body {
+    width: min(600px, 100% - 2rem);
+    margin-inline: auto;
+    margin-block: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4rem;
+    background-color: gray;
+  }
+  body > ol { flex: 1 }
+}
